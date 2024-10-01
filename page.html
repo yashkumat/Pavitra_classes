@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pavitra Classes, Ghoti</title>
+    <link rel="stylesheet" href="http://fxaeberhard.github.io/handdrawn.css/handdrawn.css">
+    <style>
+        #hero {
+            width: 100%;
+        }
+
+        .heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 32px;
+        }
+
+        #hero a {
+            font-size: 40px;
+            text-decoration: none !important;
+            border: none !important;
+            padding: 8px;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 80vw;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contactForm {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .contact-action {
+            display: flex;
+            justify-content: center;
+            gap: 128px;
+            font-size: 32px;
+            padding: 24px;
+        }
+
+        .fees {
+            display: flex;
+            gap: 16px;
+            font-size: 24px;
+            margin-top: 32px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .about-us-points {
+            font-size: 28px;
+            text-align: center;
+        }
+
+        .section-heading {
+            font-size: 60px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .extralinks {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .section-subheading {
+            font-size: 32px;
+        }
+
+        #about {
+            margin-bottom: 32px;
+            margin-top: 32px;
+        }
+
+        #fees {
+            margin-bottom: 64px;
+            margin-top: 32px;
+        }
+
+        .learningapplinks {
+            font-size: 32px;
+            padding: 8px;
+        }
+
+        #contact {
+            margin-top: 48px;
+            padding-bottom: 48px;
+        }
+
+        input,
+        textarea {
+            font-size: 32px;
+        }
+
+        .submit-button {
+            font-size: 32px;
+        }
+
+        summary {
+            font-size: 32px;
+        }
+
+        .action-button {
+            display: flex;
+            justify-content: center;
+            padding: 32px;
+        }
+
+        i {
+            font-size: 40px;
+        }
+
+        .aboutme {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .displaypicture {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+        }
+
+        .aboutmedesc {
+            font-size: 32px;
+            margin-left: 64px;
+            line-height: 48px;
+            letter-spacing: 4px;
+            text-align: justify;
+        }
+
+        .ctcbutton {
+            margin-top: 32px;
+            font-size: 32px;
+        }
+
+        .text-end {
+            text-align: end;
+        }
+
+        a {
+            text-decoration: none;
+            border-bottom: 2px solid #919090;
+            box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.2);
+            border-radius: 0 0 225px 0/0 0 15px 0;
+        }
+
+        a:hover {
+            border-bottom: 5px solid #3e3d3d;
+        }
+
+        .flip-icon {
+            transform: scaleX(-1, 1);
+        }
+
+        .highlight {
+            font-weight: 1000;
+            border-bottom: 2px solid #919090;
+            box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.2);
+            border-radius: 0 0 225px 0/0 0 15px 0;
+        }
+
+        .highlight:hover {
+            border-bottom: 5px solid #403e3e;
+        }
+
+        @media only screen and (max-width: 480px) {
+            .container {
+                width: 90vw;
+            }
+
+            .aboutme {
+                flex-direction: column;
+            }
+
+            .fees {
+                flex-direction: column;
+            }
+
+            .contact-action {
+                flex-direction: column;
+            }
+
+            .heading {
+                flex-direction: column;
+                font-size: 28px;
+            }
+
+            .section-heading {
+                font-size: 40px;
+                margin-bottom: 16px;
+            }
+
+            .aboutmedesc {
+                margin-left: 0px;
+                font-size: 24px;
+                line-height: 48px;
+                text-align: center;
+            }
+
+            .about-us-points {
+                font-size: 24px;
+            }
+
+            .about-us-points i {
+                font-size: 24px;
+            }
+
+            .about-us-points h1 {
+                margin-top: 32px;
+            }
+
+            .fees {
+                font-size: 24px;
+                row-gap: 32px;
+            }
+
+            .fees summary {
+                font-size: 32px;
+            }
+
+            .click_to_join {
+                font-size: 28px;
+            }
+
+            .click_to_join i {
+                font-size: 28px;
+            }
+
+            .joiningform {
+                font-size: 24px;
+            }
+
+            #fees {
+                margin-bottom: 32px;
+            }
+
+            .learningapplinks,
+            a,
+            i {
+                font-size: 24px;
+            }
+
+            .contact-action {
+                gap: 32px;
+            }
+
+            #contact {
+                padding-bottom: 48px;
+            }
+
+            .action-link i {
+                font-size: 40px;
+                padding: 16px;
+            }
+
+            .heading h1 {
+                margin-bottom: 16px;
+            }
+
+            .section-subheading {
+                font-size: 24px;
+            }
+
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <section id="hero">
+            <div class="heading">
+                <h1>Pavitra Classes</h1>
+                <div class="action">
+                    <a href="tel:+919527526222" class="action-link"><i class="icon-phone"></i></a>
+                    <a href="https://maps.app.goo.gl/LReD4Z5X9AtbTDNt7" class="action-link"><i class="icon-map"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="about">
+                <h1 class="text-end section-heading">Who Am I?</h1>
+                <div class="aboutme">
+                    <!-- <img src="dp.jpg" class="displaypicture" alt=""> -->
+                    <p class="aboutmedesc">I am <span class="highlight">Yash Sanjay Kumat</span>. I have studied <span
+                            class="highlight">B.Tech</span> in IT. Teaching
+                        is my passion,
+                        and I started teaching at my institute,
+                        Pavitra Classes, in <span class="highlight">2022</span> while working as a freelance <span
+                            class="highlight">Web
+                            Developer</span>.</p>
+                </div>
+                <div class="about-us-points">
+                    <h1 class="text-center section-heading">Why us?</h1>
+                    <p><i class="icon-user"></i> <span class="highlight">Daily</span> Lecture (Monday to Saturday)</p>
+                    <p><i class="icon-question"></i> Practice Sessions & <span class="highlight">Formula
+                            Revision</span> </p>
+                    <p><i class="icon-files-o"></i> <span class="highlight">Simple Notes</span> to help you Remember &
+                        Write in Exam</p>
+                    <p><i class="icon-bar-chart"></i> Weekly <span class="highlight">Test (Every
+                            Sunday),</span>
+                        with Results published in
+                        Whatsapp
+                        Group</p>
+                    <p><i class="icon-delicious"></i> <span class="highlight">Doubt Solving</span> and Question <span
+                            class="highlight">Paper discussions</span></p>
+                    <p><i class="icon-smile-o"></i> Personal Attention and Teaching based on
+                        each <span class="highlight">child's grasping
+                            ability</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="fees">
+            <h1 class="text-center section-heading">Which classes we take?</h1>
+            <div class="fees">
+                <div>
+                    <summary>CBSE</summary>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Class</th>
+                                <th>Subjects</th>
+                                <th>Fees</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>5th to 8th</td>
+                                <td>Maths & Science Only</td>
+                                <td>Rs. 1500/-</td>
+                            </tr>
+                            <tr>
+                                <td>9th & 10th</td>
+                                <td>Maths, Science & SST</td>
+                                <td>Rs. 2000/-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div>
+                    <summary>SSC</summary>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Class</th>
+                                <th>Subjects</th>
+                                <th>Fees</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>5th to 8th</td>
+                                <td>Maths & Science Only</td>
+                                <td>Rs. 1500/-</td>
+                            </tr>
+                            <tr>
+                                <td>9th & 10th</td>
+                                <td>Maths & Science Only</td>
+                                <td>Rs. 1500/-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <div>
+                    <summary>Coding</summary>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Class</th>
+                                <th>Subjects</th>
+                                <th>Fees</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Any Age Group</td>
+                                <td>HTML, CSS, Javascript</td>
+                                <td>Rs. 1000/-</td>
+                            </tr>
+                            <tr>
+                                <td>Any Age Group</td>
+                                <td>Php, Laravel, Database</td>
+                                <td>Rs. 1000/-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="action-button">
+                <details class="submit-button">
+                    <summary class="click_to_join highlight">Click To Join Us <i class="icon-heart"></i></summary>
+                    <div class="joiningform">
+                        <div class="studentclass">
+                            <p class="section-subheading">Your Class</p>
+                            <div class="radio">
+                                <input type="radio" name="yourclass" id="5th" value="5th" checked="true">
+                                <label for="5th">5th</label>
+                            </div>
+                            <div class="radio">
+                                <input type="radio" name="yourclass" id="6th" value="6th">
+                                <label for="6th">6th</label>
+                            </div>
+                            <div class="radio">
+                                <input type="radio" name="yourclass" id="7th" value="7th">
+                                <label for="7th">7th</label>
+                            </div>
+                            <div class="radio">
+                                <input type="radio" name="yourclass" id="8th" value="8th">
+                                <label for="9th">8th</label>
+                            </div>
+                            <div class="radio">
+                                <input type="radio" name="yourclass" id="9th" value="9th">
+                                <label for="9th">9th</label>
+                            </div>
+                            <div class="radio">
+                                <input type="radio" name="yourclass" id="10th" value="10th">
+                                <label for="10th">10th</label>
+                            </div>
+                        </div>
+                        <div class="studentboard">
+                            <p class="section-subheading">Your Board</p>
+                            <div class="radio">
+                                <input type="radio" name="yourboard" id="cbse" checked="true" value="CBSE">
+                                <label for="cbse">CBSE</label>
+                            </div>
+                            <div class="radio">
+                                <input type="radio" name="yourboard" id="ssc" value="SSC">
+                                <label for="ssc">SSC</label>
+                            </div>
+                            <div class="radio">
+                                <input type="radio" name="yourboard" id="icse" value="ICSE">
+                                <label for="icse">ICSE</label>
+                            </div>
+                        </div>
+                        <button class="ctcbutton" onclick="join_now_message()">Join Now</button>
+                    </div>
+                </details>
+
+            </div>
+        </section>
+
+        <section id="extrabenifits">
+            <div class="extralinks">
+                <h1 class="text-center section-heading">What extra do we offer?</h1>
+                <p class="text-center section-subheading">We have developed different Play & Learn applications for
+                    students to help
+                    them understand concepts thoroughly!
+                </p>
+                <a class="learningapplinks" href="https://learn.yashk.in"><i class="icon-question-circle"></i> Practice
+                    MCQ </a>
+                <a class="learningapplinks" href="https://yashkumat.github.io/memorize_tables"><i
+                        class="icon-sliders"></i> Learn Maths Tables </a>
+                <a class="learningapplinks" href="https://yashkumat.github.io/MathPractice/"><i
+                        class="icon-times-square"></i> Practice Basic Maths </a>
+                <a class="learningapplinks" href="https://yashkumat.github.io/periodic_table/"><i class="icon-th"></i>
+                    Periodic Table </a>
+                <a class="learningapplinks" href="https://yashkumat.github.io/historical-figures/"><i
+                        class="icon-user"></i> Historical Figures
+                </a>
+                <a class="learningapplinks" href="https://yashkumat.github.io/number_to_words/"><i
+                        class="icon-quote-right"></i> Number to Words </a>
+                <a class="learningapplinks" href="https://yashkumat.github.io/a_for_apple/"><i
+                        class="icon-hourglass-half"></i> Guess the Alphabet </a>
+                <a class="learningapplinks" href="https://yashkumat.github.io/alphabets/"><i
+                        class="icon-pencil-square-o"></i> Learn to Write</a>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="contact">
+                <h1 class="text-center section-heading">How to Contact Us?</h1>
+                <div class="contact-action">
+                    <a href="tel:+919527526222"><i class="icon-phone"></i> Call</a>
+                    <a href="https://wa.me/+919527526222/"><i class="icon-envelope"></i> Whatsapp</a>
+                    <a href="https://maps.app.goo.gl/LReD4Z5X9AtbTDNt7"><i class="icon-compass"></i> Google Location</a>
+                </div>
+                <p class="text-center section-subheading">A good teacher answers all your Whys, Whens, and Whats.
+                    Hopefully, I have answered all your questions. If you still have
+                    any, feel free to send them to us now, and we will get back to you on WhatsApp.</p>
+                <form class="contactForm">
+                    <textarea name="yourquestion" placeholder="Your Question"></textarea>
+                    <button class="submit-button" onclick="send_question()">Ask Now!</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function join_now_message() {
+            var studentclass = document.querySelector('[name="yourclass"]').value;
+            var studentboard = document.querySelector('[name="yourboard"]').value;
+            var message = `Hello Sir, I am ${studentclass} class ${studentboard} board student. I want to join Pavitra Classes.`;
+            var final_msg = encodeURI(message);
+            window.open(`https://wa.me/+919527526222/?text=${final_msg}`, '_blank');
+        }
+
+        function send_question() {
+            var studentquestion = document.querySelector('[name="yourquestion"]').value;
+            var final_msg = encodeURI(studentquestion);
+            window.open(`https://wa.me/+919527526222/?text=${final_msg}`, '_blank');
+        }
+    </script>
+</body>
+
+</html>
