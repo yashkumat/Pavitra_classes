@@ -4,8 +4,6 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pavitra Classes, Ghoti</title>
     <meta property='og:title' content='Pavitra Classes' />
     <meta property='og:image' content='https://yashkumat.github.io/Pavitra_classes/logo.png' />
@@ -210,6 +208,31 @@
             text-decoration: none;
         }
 
+        #tile4:hover {
+            background: #052;
+        }
+
+        #tile4:hover .t-cont {
+            color: #7BF0B2;
+        }
+
+        #tile4:hover .t-desc {
+            color: #7BF0B2;
+        }
+
+        .t-contact .t-cont {
+            font-size: 22px;
+            font-weight: 700;
+            color: #052;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        .t-contact .t-desc {
+            margin-top: 8px;
+            color: #052;
+            animation: heartbeat 1.5s infinite;
+        }
+
         /* mascot */
         .mascot {
             width: 120px;
@@ -225,6 +248,31 @@
             border-radius: 12px;
             text-decoration: none;
             font-weight: 700
+        }
+
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1);
+            }
+
+            25% {
+                transform: scale(1.2);
+                /* Enlarge slightly */
+            }
+
+            50% {
+                transform: scale(1);
+                /* Return to normal */
+            }
+
+            75% {
+                transform: scale(1.1);
+                /* Enlarge slightly less */
+            }
+
+            100% {
+                transform: scale(1);
+            }
         }
 
         /* responsive */
@@ -342,8 +390,8 @@
             </div>
 
             <a href="tel:9527526222" class="tile t-mint t-contact" id="tile4">
-                <div style="font-size:22px;font-weight:700;color:#052">9527526222</div>
-                <div style="margin-top:8px;color:#052">Contact Now</div>
+                <div class="t-cont">9527526222</div>
+                <div class="t-desc">Contact Now</div>
             </a>
 
         </section>
