@@ -80,6 +80,18 @@
             color: #fff
         }
 
+        .toast {
+            position: fixed;
+            right: 18px;
+            top: 18px;
+            background: #5be6b4;
+            padding: 10px 14px;
+            border-radius: 8px;
+            color: #052;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+            display: none
+        }
+
         .quiz-card h2 {
             margin: 0 0 8px;
             font-size: 20px;
@@ -105,7 +117,7 @@
             background: rgba(255, 255, 255, 0.06);
             color: #fff;
             font-size: 18px;
-            width: 140px
+            width: 180px
         }
 
         .answer-row button {
@@ -290,7 +302,7 @@
 
     <div class="quiz-overlay" id="quiz">
         <div class="quiz-card" role="dialog" aria-modal="true" aria-labelledby="quiz-title">
-            <h2 id="quiz-title">solve to enter</h2>
+            <h2 id="quiz-title">Solve to enter</h2>
             <div class="question" id="question">6 + 3 = ?</div>
             <div class="answer-row">
                 <input id="answer" inputmode="numeric" autocomplete="off" placeholder="Type your answer"
@@ -324,22 +336,19 @@
                 <div style="margin-top:8px;color:#fff">Rs. 2000 monthly</div>
             </div>
 
-
             <div class="tile t-purple" id="tile5">
                 <div style="font-size:22px;font-weight:700;color:#fff">1 hour daily</div>
                 <div style="margin-top:8px;color:rgba(255,255,255,0.9)">Interactive Session</div>
             </div>
-
-
 
             <a href="tel:9527526222" class="tile t-mint t-contact" id="tile4">
                 <div style="font-size:22px;font-weight:700;color:#052">9527526222</div>
                 <div style="margin-top:8px;color:#052">Contact Now</div>
             </a>
 
-            <div class="toast" id="toast">Correct — opening site...</div>
-
         </section>
+
+        <div class="toast" id="toast">Correct — opening site...</div>
 
     </main>
 
@@ -350,9 +359,18 @@
         const ansInput = document.getElementById('answer');
         const checkBtn = document.getElementById('check');
         let correctAnswer = null;
+
         function randomInt(min, max) { return Math.floor(Math.random() * (max - min + 1)) + min }
-        function makeQuestion() { const a = randomInt(2, 12); const b = randomInt(1, 9); const op = Math.random() < 0.6 ? '+' : '-'; if (op === '+') { correctAnswer = a + b; qEl.textContent = `${a} + ${b} = ?` } else { const x = Math.max(a, b); const y = Math.min(a, b); correctAnswer = x - y; qEl.textContent = `${x} - ${y} = ?` } }
+
+        function makeQuestion() {
+            const a = randomInt(2, 12);
+            const b = randomInt(1, 9);
+            const op = Math.random() < 0.6 ? '+' : '-';
+            if (op === '+') { correctAnswer = a + b; qEl.textContent = `${a} + ${b} = ?` }
+            else { const x = Math.max(a, b); const y = Math.min(a, b); correctAnswer = x - y; qEl.textContent = `${x} - ${y} = ?` }
+        }
         makeQuestion();
+
         function showToast(msg) {
             const t = document.getElementById('toast');
             t.textContent = msg; t.style.display = 'block';
@@ -364,9 +382,8 @@
             quizEl.style.display = 'none';
             const page = document.getElementById('page');
             page.classList.add('show');
-            showToast('Correct — enjoy the site')
+            showToast('Correct answer genius!')
         }
-
 
         checkBtn.addEventListener('click', () => {
             const val = ansInput.value.trim();
