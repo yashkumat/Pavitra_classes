@@ -233,6 +233,33 @@
             animation: heartbeat 1.5s infinite;
         }
 
+        .t-review {
+            text-decoration: none;
+        }
+
+        #tile3:hover {
+            background: #bb8dff;
+        }
+
+        .tile3-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #fff
+        }
+
+        .tile3-desc {
+            margin-top: 8px;
+            color: #fff
+        }
+
+        #tile3:hover .tile3-title {
+            color: #0b0b0f;
+        }
+
+        #tile3:hover .tile3-desc {
+            color: #0b0b0f;
+        }
+
         /* mascot */
         .mascot {
             width: 120px;
@@ -363,10 +390,11 @@
     <main class="page" id="page">
 
         <!-- mosaic -->
-        <section class="mosaic" id="mosaic">
+         <section class="mosaic" id="mosaic">
             <div class="tile t-blue big" id="tile1">
                 <div class="label">Pavitra<br>Classes</div>
-                <div class="caption">Building strong fundamentals, improving conceptual understanding</div>
+                <div class="caption">Building strong fundamentals, improving conceptual understanding and helping
+                    every student score higher.</div>
             </div>
 
             <div class="tile t-pink" id="tile2">
@@ -374,9 +402,9 @@
                 <div style="margin-top:8px;color:#222">Maths and Science Coaching</div>
             </div>
 
-            <div class="tile t-yellow" id="tile3">
-                <div style="font-size:22px;font-weight:700;color:#222">Classes</div>
-                <div style="margin-top:8px;color:#222">for Std. 7th to 10th</div>
+            <div class="tile t-yellow" id="tile5">
+                <div style="font-size:22px;font-weight:700;color:#222">1 hour daily</div>
+                <div style="margin-top:8px;color:#222">Classes for Std. 7th to 10th</div>
             </div>
 
             <div class="tile t-orange" id="tile6">
@@ -384,10 +412,10 @@
                 <div style="margin-top:8px;color:#fff">Rs. 2000 monthly</div>
             </div>
 
-            <div class="tile t-purple" id="tile5">
-                <div style="font-size:22px;font-weight:700;color:#fff">1 hour daily</div>
-                <div style="margin-top:8px;color:rgba(255,255,255,0.9)">Interactive Session</div>
-            </div>
+            <a href="https://g.page/r/CTbvr03zTIs8EBE/review" class="tile t-purple t-review" id="tile3">
+                <div class="tile3-title">Rate Us</div>
+                <div class="tile3-desc">Click to wrtie reivew</div>
+            </a>
 
             <a href="tel:9527526222" class="tile t-mint t-contact" id="tile4">
                 <div class="t-cont">9527526222</div>
